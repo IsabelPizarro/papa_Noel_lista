@@ -2,19 +2,17 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
+
 
 .App-header {
-  background-color: #282c34;
+  background-color: whitesmoke;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color:rgb(0, 119, 255);
 }
 
 .App-link {

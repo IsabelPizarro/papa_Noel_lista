@@ -1,34 +1,26 @@
 import React from "react";
+import './App.css';
 
-import { makeStyles } from "@material-ui/core/styles";
-
+import { makeStyles } from '@material-ui/core/styles';
 import TextField from "@material-ui/core/TextField";
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
-  container: {
-    display: "flex",
-    flexWrap: "wrap"
+  margin: {
+    margin: theme.spacing(1),
+    marginTop:25,
+    color:"blue",
   },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1)
-  },
-  dense: {
-    marginTop: theme.spacing(2)
-  },
-  menu: {
-    width: 600
-  }
+ 
 }));
-
  function AddWhist (props) {
  
    const {handleChange, handleText, wish} = props;
   
-
   
 
+  
+  const classes = useStyles();
   return (
     <form className="form" noValidate autoComplete="off">
       <TextField
@@ -43,7 +35,7 @@ const useStyles = makeStyles(theme => ({
         variant="outlined"
       /> 
      
-      <Button variant="contained" color="primary" value="enviar"  onClick={handleChange}>
+      <Button   value="enviar"  onClick={handleChange} variant="outlined" size="medium" color="primary" className={classes.margin}>
      Añadir
     </Button>
     </form>
