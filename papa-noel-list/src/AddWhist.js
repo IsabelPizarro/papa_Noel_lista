@@ -22,28 +22,9 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
- class AddWhist extends React.Component {
+ function AddWhist (props) {
  
-  constructor() {
-    super();
-    
-    this.handleChange=this.handleChange.bind(this);
-    this.handleText=this.handleText.bind(this);
-   
-  }
-  handleChange(event) {
-    
-    console.log(event.currentTarget.value);
-    
-  }
-  handleText(event){
-  
-  
-    console.log(event.currentTarget.value);
-  }
-
-  render(){
-  const {handleChange, handleText, wish} = props;
+   const {handleChange, handleText, wish} = props;
   
 
   
@@ -68,5 +49,5 @@ const useStyles = makeStyles(theme => ({
     </form>
   );
 }
-}
+
 export default AddWhist;
