@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   }
 
   render(){
-  const {handleChange, handleText} = this.props;
+  const {handleChange, handleText, wish} = props;
   
 
   
@@ -54,6 +54,7 @@ const useStyles = makeStyles(theme => ({
         id="outlined-name"
         label="Introduce tu deseo"
         className="text"
+        wish={wish}
         
         onChange={handleText}
         type="text"

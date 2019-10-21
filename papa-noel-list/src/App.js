@@ -10,7 +10,7 @@ class App extends React.Component  {
     super(props);
     this.state = {
       wish:"",
-     whishes:[]
+      wishes:[]
      
     };
     this.handleChange = this.handleChange.bind(this);
@@ -40,7 +40,7 @@ class App extends React.Component  {
     this.state.whises.push(this.state.wish);
     
     this.setState({
-      whises:this.state.whises,
+      whises:this.state.wishes,
       wish:""
     });
     
@@ -61,7 +61,7 @@ console.log(this.state.wishes);
 
 
   render(){
-    const {wish, whishes}=this.state;
+    const {wish, wishes}=this.state;
   return (
     <div className="App">
       <header className="App-header">
@@ -73,9 +73,12 @@ console.log(this.state.wishes);
         <AddWhist 
         handleText={this.handleText}
       
-        handleChange={this.handleChange}/>
+        handleChange={this.handleChange}
+        wishes={wishes}
+        wish={wish}/>
         
-        <ListWhist />
+        <ListWhist 
+        wishes={wishes} />
       </main>
     </div>
   );

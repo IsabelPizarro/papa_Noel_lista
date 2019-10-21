@@ -16,8 +16,9 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function ListWhist() {
-  
+export default function ListWhist(props) {
+ 
+  const {wishes}= props;
   const classes = useStyles();
   const [checked, setChecked] = React.useState([1]);
 
@@ -34,21 +35,20 @@ export default function ListWhist() {
     setChecked(newChecked);
   };
   
-  let whises=["eaton","cohce"];
   return (
-    <List  className={classes.root}>
-      {whises.map(value => {
-        const labelId = `checkbox-list-secondary-label-${value}`;
+    <List  className={classes.root} wishes={wishes}>
+      {wishes.map(item => {
+        const labelId = `checkbox-list-secondary-label-${item}`;
         return (
-          <ListItem key={value} button>
+          <ListItem key={item} button>
             
               
-            <ListItemText id={labelId} primary={value} />
+            <ListItemText id={labelId} primary={item} />
             <ListItemSecondaryAction>
               <Checkbox
                 edge="end"
                 
-                checked={checked.indexOf(value) !== -1}
+                checked={checked.indexOf(item) !== -1}
                 inputProps={{ 'aria-labelledby': labelId }}
               />
             </ListItemSecondaryAction>
