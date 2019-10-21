@@ -37,7 +37,7 @@ class App extends React.Component  {
     
     
     console.log(event.currentTarget.value);
-    this.state.whises.push(this.state.wish);
+    this.state.wishes.push(this.state.wish);
     
     this.setState({
       whises:this.state.wishes,
