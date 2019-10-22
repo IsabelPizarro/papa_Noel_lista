@@ -16,10 +16,7 @@ const useStyles = makeStyles(theme => ({
  function AddWhist (props) {
  
    const {handleChange, handleText, wish} = props;
-  
-  
 
-  
   const classes = useStyles();
   return (
     <form className="form" noValidate autoComplete="off">
@@ -28,13 +25,12 @@ const useStyles = makeStyles(theme => ({
         label="Introduce tu deseo"
         className="text"
         wish={wish}
-        
+        value={wish}
         onChange={handleText}
         type="text"
         margin="normal"
         variant="outlined"
-      /> 
-     
+      />
       <Button   value="enviar"  onClick={handleChange} variant="outlined" size="medium" color="primary" className={classes.margin}>
      Añadir
     </Button>
